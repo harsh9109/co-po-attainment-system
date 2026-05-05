@@ -1,54 +1,58 @@
-# CO-PO Attainment System (Theory + Practical)
+# 🎓 CO-PO Attainment System (NBA Analytics Tool)
 
-A Streamlit-based NBA analytics and reporting system for Course Outcome (CO), Program Outcome (PO), and Program Specific Outcome (PSO) attainment.
-
-This app supports:
-- **Theory Mode**
-- **Practical Mode** (dynamic external components such as Practical, Term Work, Oral)
-
-It generates:
-- CO internal/external/final attainment tables
-- Discrimination Index (DI) analytics
-- PO/PSO attainment analytics
-- Charts/dashboard
-- Exportable **Excel** and **PDF** reports
+A professional **Streamlit-based web application** for automating Outcome-Based Education (OBE) analytics aligned with **NBA accreditation standards**.
+It computes **Course Outcomes (CO), Program Outcomes (PO), and Program Specific Outcomes (PSO)** from student data and generates structured reports.
 
 ---
 
-## 1) Features
+## 🚀 Key Features
 
-- NBA attainment level logic (0 to 3)
-- Exam-wise attainment computation
-- DI using configurable top/bottom percentages
-- CO final attainment using internal/external weightages
-- CO to PO and CO to PSO contribution mapping
-- Modern Streamlit dashboard UI
-- Excel + PDF report export
-
----
-
-## 2) Project Structure
-
-- `app.py` - Main Streamlit application
-- `requirements.txt` - Python dependencies
-- `.streamlit/config.toml` - Streamlit UI/server config
-- `.gitignore` - Ignore local/cache/generated files
+* 📊 CO internal, external & final attainment calculation
+* 📈 Discrimination Index (DI) analysis with configurable parameters
+* 🔗 CO–PO & CO–PSO mapping contribution analysis
+* 🧠 Intelligent academic insights & performance evaluation
+* 📉 Interactive dashboards (Plotly + Matplotlib)
+* 📄 Export reports in **Excel & PDF formats**
+* 🔄 Supports both **Theory & Practical modes**
 
 ---
 
-## 3) Local Setup
+## 🏗️ Tech Stack
+
+* **Frontend/UI:** Streamlit
+* **Data Processing:** Pandas, NumPy
+* **Visualization:** Plotly, Matplotlib
+* **Reporting:** ReportLab, OpenPyXL
+
+---
+
+## 📂 Project Structure
+
+```
+.
+├── app.py                  # Main Streamlit application
+├── requirements.txt        # Dependencies
+├── README.md               # Project documentation
+├── .streamlit/config.toml  # Streamlit configuration
+└── .gitignore              # Ignored files
+```
+
+---
+
+## ⚙️ Local Setup
 
 ### Prerequisites
-- Python 3.10+ (recommended)
-- `pip`
 
-### Install
+* Python 3.10 or 3.11
+* pip
+
+### Installation
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Run
+### Run Application
 
 ```bash
 streamlit run app.py
@@ -56,83 +60,94 @@ streamlit run app.py
 
 ---
 
-## 4) How to Use
+## 📌 How to Use
 
-1. Open the app in browser (after `streamlit run app.py`).
-2. In **Input & Config** tab:
-   - Select **Assessment Mode**: `Theory` or `Practical`
-   - Enter subject and CO details
-   - Configure weightages and DI settings
-   - Configure mappings (CO-Exam, CO-PO, CO-PSO)
-   - Upload marks Excel (or download sample template first)
-3. Click **Calculate CO-PO Attainment**.
-4. Review outputs in:
-   - **Results**
-   - **Charts**
-   - **Export**
-5. Download Excel/PDF reports from Export tab.
+1. Open the app in your browser
+2. Select **Assessment Mode** (Theory / Practical)
+3. Enter subject & CO details
+4. Configure:
 
----
+   * Weightages
+   * DI settings
+   * CO mappings
+5. Upload student marks Excel file
+6. Click **Calculate CO-PO Attainment**
+7. View:
 
-## 5) Input Format
-
-### Theory Mode Required Columns
-- `Student Name`
-- `Unit Test 1`
-- `Unit Test 2`
-- `Unit Test 3`
-- `Prelim`
-- `Insem`
-- `Endsem`
-
-### Practical Mode Required Columns
-- `Student Name`
-- `Internal`
-- `External_Component_1`
-- `External_Component_2`
-- ... (based on how many external components you configure in app)
-
-> Tip: use the in-app **Download Sample Template** button for the selected mode.
+   * Results
+   * Charts
+   * Export reports
 
 ---
 
-## 6) Deploy on Streamlit Community Cloud
+## 📥 Input Format
 
-1. Push this project to a GitHub repository.
-2. Go to [https://share.streamlit.io](https://share.streamlit.io).
-3. Click **New app** and choose your repo/branch.
-4. Set:
-   - **Main file path**: `app.py`
-5. Deploy.
+### Theory Mode
 
-Streamlit Cloud automatically installs packages from `requirements.txt`.
+* Student Name
+* Unit Test 1
+* Unit Test 2
+* Unit Test 3
+* Prelim
+* Insem
+* Endsem
 
----
+### Practical Mode
 
-## 7) Optional Deployment Notes
+* Student Name
+* Internal
+* External components (configurable)
 
-- If deploy is slow or fails, confirm package install logs for:
-  - `reportlab`
-  - `matplotlib`
-  - `openpyxl`
-- Keep filenames and imports case-sensitive.
-- Avoid uploading very large Excel files on free tiers.
+> ⚡ Tip: Use the in-app **sample template download** for correct format.
 
 ---
 
-## 8) Troubleshooting
+## 🌐 Deployment
 
-- **ModuleNotFoundError**  
-  Re-run `pip install -r requirements.txt`.
+Easily deploy using **Streamlit Community Cloud**:
 
-- **Excel upload error**  
-  Ensure required columns exist exactly as expected.
+1. Push this repo to GitHub
+2. Go to https://share.streamlit.io
+3. Click **New App**
+4. Select repo and set:
 
-- **No results showing**  
-  Confirm you clicked **Calculate CO-PO Attainment** after upload/config.
+   * Main file: `app.py`
+5. Deploy 🚀
 
 ---
 
-## 9) License
+## ⚠️ Troubleshooting
 
-Use within your academic/institutional context as needed.
+* **ModuleNotFoundError** → Check `requirements.txt`
+* **Excel upload issues** → Verify column names
+* **No output** → Click *Calculate* button
+
+---
+
+## 🎯 Use Case
+
+* NBA Accreditation Documentation
+* Academic Performance Analysis
+* Faculty Decision Support System
+* Outcome-Based Education Implementation
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+You are free to use, modify, and distribute it with proper attribution.
+
+---
+
+## 👨‍💻 Author
+
+**Harshvardhan Bharat Mali**
+Embedded Systems | AI | VLSI Enthusiast
+
+🔗 LinkedIn: https://www.linkedin.com/in/harshvardhanmali910
+🔗 GitHub: https://github.com/harsh9109
+
+---
+
+⭐ If you found this project useful, consider giving it a star!
